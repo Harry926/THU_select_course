@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>東海查課小幫手</title>
+</head>
+<body>
+	<form name="form1" method="post">
+		請選擇學院 :  <select id="college-list" name="college" onchange="changeCollege(this.selectedIndex)"></select>
+		請選擇學系/學程 :  <select id="sector-list" name="sector"></select>
+		<br/>
+		<table BORDER="2" alig=center>
+		<caption>課表時間(請勾選想選課的時間)</caption>
+		<tr>
+			<td>節次/星期</td>
+			<td>星期一<br/><input type="checkbox" name="cb1all" onclick="check_all(this,'cb1')" />全選</td>
+			<td>星期二<br/><input type="checkbox" name="cb2all" onclick="check_all(this,'cb2')" />全選</td>
+			<td>星期三<br/><input type="checkbox" name="cb3all" onclick="check_all(this,'cb3')" />全選</td>
+			<td>星期四<br/><input type="checkbox" name="cb4all" onclick="check_all(this,'cb4')" />全選</td>
+			<td>星期五<br/><input type="checkbox" name="cb5all" onclick="check_all(this,'cb5')" />全選</td>
+		</tr>
+		<tr>
+			<td>1<br/>08:10-09:00</td>
+			<td><input type="checkbox" name="cb1" value="一,1"></td>
+			<td><input type="checkbox" name="cb2" value="二,1"></td>
+			<td><input type="checkbox" name="cb3" value="三,1"></td>
+			<td><input type="checkbox" name="cb4" value="四,1"></td>
+			<td><input type="checkbox" name="cb5" value="五,1"></td>
+		</tr>
+		<tr>
+			<td>2<br/>09:10-10:00</td>
+			<td><input type="checkbox" name="cb1" value="一,2"></td>
+			<td><input type="checkbox" name="cb2" value="二,2"></td>
+			<td><input type="checkbox" name="cb3" value="三,2"></td>
+			<td><input type="checkbox" name="cb4" value="四,2"></td>
+			<td><input type="checkbox" name="cb5" value="五,2"></td>
+		</tr>
+		<tr>
+			<td>3<br/>10:20-11:10</td>
+			<td><input type="checkbox" name="cb1" value="一,3"></td>
+			<td><input type="checkbox" name="cb2" value="二,3"></td>
+			<td><input type="checkbox" name="cb3" value="三,3"></td>
+			<td><input type="checkbox" name="cb4" value="四,3"></td>
+			<td><input type="checkbox" name="cb5" value="五,3"></td>
+		</tr>
+		<tr>
+			<td>4<br/>11:20-12:10</td>
+			<td><input type="checkbox" name="cb1" value="一,4"></td>
+			<td><input type="checkbox" name="cb2" value="二,4"></td>
+			<td><input type="checkbox" name="cb3" value="三,4"></td>
+			<td><input type="checkbox" name="cb4" value="四,4"></td>
+			<td><input type="checkbox" name="cb5" value="五,4"></td>
+		</tr>
+		<tr>
+			<td>5<br/>13:10-14:00</td>
+			<td><input type="checkbox" name="cb1" value="一,5"></td>
+			<td><input type="checkbox" name="cb2" value="二,5"></td>
+			<td><input type="checkbox" name="cb3" value="三,5"></td>
+			<td><input type="checkbox" name="cb4" value="四,5"></td>
+			<td><input type="checkbox" name="cb5" value="五,5"></td>
+		</tr>
+		<tr>
+			<td>6<br/>14:10-15:00</td>
+			<td><input type="checkbox" name="cb1" value="一,6"></td>
+			<td><input type="checkbox" name="cb2" value="二,6"></td>
+			<td><input type="checkbox" name="cb3" value="三,6"></td>
+			<td><input type="checkbox" name="cb4" value="四,6"></td>
+			<td><input type="checkbox" name="cb5" value="五,6"></td>
+		</tr>
+			<td>7<br/>15:20-16:10</td>
+			<td><input type="checkbox" name="cb1" value="一,7"></td>
+			<td><input type="checkbox" name="cb2" value="二,7"></td>
+			<td><input type="checkbox" name="cb3" value="三,7"></td>
+			<td><input type="checkbox" name="cb4" value="四,7"></td>
+			<td><input type="checkbox" name="cb5" value="五,7"></td>
+		</tr>
+		</tr>
+			<td>8<br/>16:20-17:10</td>
+			<td><input type="checkbox" name="cb1" value="一,8"></td>
+			<td><input type="checkbox" name="cb2" value="二,8"></td>
+			<td><input type="checkbox" name="cb3" value="三,8"></td>
+			<td><input type="checkbox" name="cb4" value="四,8"></td>
+			<td><input type="checkbox" name="cb5" value="五,8"></td>
+		</tr>
+		</tr>
+			<td>9<br/>17:20-18:10</td>
+			<td><input type="checkbox" name="cb1" value="一,9"></td>
+			<td><input type="checkbox" name="cb2" value="二,9"></td>
+			<td><input type="checkbox" name="cb3" value="三,9"></td>
+			<td><input type="checkbox" name="cb4" value="四,9"></td>
+			<td><input type="checkbox" name="cb5" value="五,9"></td>
+		</tr>
+		</tr>
+			<td>10<br/>18:20-19:10</td>
+			<td><input type="checkbox" name="cb1" value="一,10"></td>
+			<td><input type="checkbox" name="cb2" value="二,10"></td>
+			<td><input type="checkbox" name="cb3" value="三,10"></td>
+			<td><input type="checkbox" name="cb4" value="四,10"></td>
+			<td><input type="checkbox" name="cb5" value="五,10"></td>
+		</tr>
+		</tr>
+			<td>11<br/>19:20-20:10</td>
+			<td><input type="checkbox" name="cb1" value="一,11"></td>
+			<td><input type="checkbox" name="cb2" value="二,11"></td>
+			<td><input type="checkbox" name="cb3" value="三,11"></td>
+			<td><input type="checkbox" name="cb4" value="四,11"></td>
+			<td><input type="checkbox" name="cb5" value="五,11"></td>
+		</tr>
+		</tr>
+			<td>12<br/>20:20-21:10</td>
+			<td><input type="checkbox" name="cb1" value="一,12"></td>
+			<td><input type="checkbox" name="cb2" value="二,12"></td>
+			<td><input type="checkbox" name="cb3" value="三,12"></td>
+			<td><input type="checkbox" name="cb4" value="四,12"></td>
+			<td><input type="checkbox" name="cb5" value="五,12"></td>
+		</tr>
+		</tr>
+			<td>13<br/>21:20-22:10</td>
+			<td><input type="checkbox" name="cb1" value="一,13"></td>
+			<td><input type="checkbox" name="cb2" value="二,13"></td>
+			<td><input type="checkbox" name="cb3" value="三,13"></td>
+			<td><input type="checkbox" name="cb4" value="四,13"></td>
+			<td><input type="checkbox" name="cb5" value="五,13"></td>
+		</tr>
+		<tr>	
+		</table>
+		<input type="submit" name="submit">
+	</form>
+	<script>
+        function check_all(obj,cName){
+            var checkboxs = document.getElementsByName(cName);
+            for(var i=0;i<checkboxs.length;i++){checkboxs[i].checked = obj.checked;}
+        }
+		var colleges=['文學院','理學院','工學院','管理學院','社會科學院','農學院','創藝學院','法律學院','國際學院','通識課程','共同選修','外語課程','軍訓體育','其他課程'];
+		var collegeSelect=document.getElementById("college-list");
+		var inner="";
+		for(var i=0;i<colleges.length;i++){
+			inner=inner+'<option value='+i+'>'+colleges[i]+'</option>';
+		}
+		collegeSelect.innerHTML=inner;
+
+		var sectors=new Array();
+		sectors[0]=['全選','文學院','中國文學系' ,'外國語文學系' ,'歷史學系' ,'華語文教學國際碩士學位學程' ,'日本語言文化學系','哲學系' ,'哲學系碩士在職專班'];
+		sectors[1]=['全選','理學院','應用物理學系','化學系','生命科學系','應用數學系','生醫暨材料科學國際博士學位學程','生物多樣性國際研究生博士學位學程'];	
+		sectors[2]=['全選','工學院','化學工程與材料工程學系','工業工程與經營資訊學系','工業工程與經營資訊碩士專班','環境科學與工程學系','資訊工程學系','資訊工程學系在職專班','電機工程學系','數位創新碩士學位學程'];	
+		sectors[3]=['全選','管理學院','企業管理學系','國際經營與貿易學系','會計學系','財務金融學系', '高階經營管理專班', '國際企業管理碩士學位學程', '統計學系', '資訊管理學系'];
+		sectors[4]=['全選','社會科學院','經濟學系','政治學系','行政管理暨政策學系','社會學系','社會工作學系','教育研究所','教育研究所碩士在職專班','公共事務在職專班']
+		sectors[5]=['全選','農學院','畜產與生物科技學系','食品科學系','餐旅管理學系','餐旅管理學系在職專班','運動休閒與健康管理學位學程','高齡健康與運動科學學士學位學程'];
+		sectors[6]=['全選','創意設計暨藝術學院','美術學系','美術系碩士在職專班','音樂學系','建築學系','工業設計學系','工業設計學系碩士在職專班','景觀學系','景觀系碩士班在職專班','表演藝術與創作碩士學位學程'];
+		sectors[7]=['全選','法律學系'];
+		sectors[8]=['全選','國際學院','國際經營管理學位學程','永續科學與工程學士學位學程','國際學院不分系英語學士班'];
+		sectors[9]=['全選','通識課程:人文領域','通識課程:自然領域','通識課程:社會領域','通識課程:文明與經典','通識課程:領導與倫理','AI思維與程式設計','通識課程:議題導向'];
+		sectors[10]=['全選','多元學習課程(共同選修)'];
+		sectors[11]=['全選','第二外國語','日文課程','中文課程','大一英文','選修英文','大二英文'];
+		sectors[12]=['全選','軍訓一','軍護二','體育課程(進修部)','大一大二體育'];
+		sectors[13]=['全選','師資培育中心課程'];
+		function changeCollege(index){
+			var Sinner="";
+			for(var i=0;i<sectors[index].length;i++){
+				Sinner=Sinner+'<option value='+i+'>'+sectors[index][i]+'</option>';
+			}
+			var sectorSelect=document.getElementById("sector-list");
+			sectorSelect.innerHTML=Sinner;
+		}
+		changeCollege(document.getElementById("college-list").selectedIndex);
+    </script>
+</body>
+</html>

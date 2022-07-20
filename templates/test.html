@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>東海查課小幫手</title>
+</head>
+<body>
+    <p id="mytable"></p>
+    <script>
+        var data = JSON.parse('{{ data | tojson | safe}}');
+        text = "<table border='1'><tr><td>選課代號</td><td>課程名稱</td><td>學分數</td><td>時間</td><td>授課老師</td><td>備註</td></tr>";
+        for (i = 0; i < data.course.length; i++){
+            text += "<tr>"+
+                    "<td>"+"<a href = "+data.course[i].url+" target=_blank>"+data.course[i].id+"</a>"+"</td>"+
+                    "<td>"+data.course[i].name+"</td>"+
+                    "<td>"+data.course[i].credit+"</td>"+
+                    "<td width=120>"+data.course[i].time+"</td>"+
+                    "<td width=70>"+data.course[i].teacher+"</td>"+
+                    "<td>"+data.course[i].note+"</td>"+
+                    "</tr>";
+        }
+        text += "</table>";
+        document.getElementById("mytable").innerHTML = text; 
+    </script>
+</body>
+</html>
